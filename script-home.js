@@ -86,7 +86,6 @@ function typeWriter(id, arr) {
 
             if (eParagraph.innerHTML.length > 0) {
                 eParagraph.innerHTML = eParagraph.innerHTML.substr(0, eParagraph.innerHTML.length - 1);
-                
             } else if (eHeader.innerHTML.length > 0) {
                   eParagraph.classList.remove("cursor");
                   eHeader.classList.add("cursor");
