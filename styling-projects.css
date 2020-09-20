@@ -200,6 +200,7 @@ ul {
 
 .links a:hover {
     color: #fff;
+    text-decoration: none;
 }
 
 .container.active .links a {
