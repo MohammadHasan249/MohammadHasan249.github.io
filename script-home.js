@@ -7,11 +7,12 @@ var i = 0, a = 0, isBackspacing = false, isParagraph = false;
 var abort = true;
 
 var texts = [
-    "Who am I?|My name is Mohammad Hasan",
-    "Where do I study?|I am a CS Specialist at University of Toronto",
-    "What's your favorite hobby?|Football(also known as soccer by some plebs)",
-    "Who are you?|Extinction...",
-    "I have been programmed with only one goal...|Destruction"
+    "Hello there! First of all, welcome to my website!|My name is Mohammad Hasan",
+    "I am a CS Specialist at University of Toronto|I am actively looking for a PEY/Co-Op internship!",
+    "On the menu bar, you'll find a Projects page|This page consists a list of projects that I've worked on, and I'll be constantly updating that page :)",
+    "And a Courses page|Here, you'll find a list of courses I've done, whether in uni or in my free time",
+    "If you go to my About page, do check out my email icon|kind of cheesy but hey, that's life <3",
+    "Oh, before I let you go|This runs in a loop, so I'd recommend clicking the button to pause it :)"
 ];
 
 var speedForward = 100, speedWait = 1000, speedBetweenLines = 1000, speedBackspace = 25;
@@ -25,7 +26,7 @@ playButton.onclick = function() {
         if (abort == false) {
             playIcon.classList.remove("fa-play");
             playIcon.classList.add("fa-pause");
-            typeWriter("output", texts); 
+            typeWriter("output", texts);
         }
         else {
             playIcon.classList.remove("fa-pause");
@@ -52,7 +53,7 @@ function typeWriter(id, arr) {
                 i++;
                 setTimeout(function() {
                     if (abort == false) {
-                     typeWriter(id, arr);    
+                     typeWriter(id, arr);
                     }
                 }, speedBetweenLines);
 
@@ -66,16 +67,16 @@ function typeWriter(id, arr) {
                 i++;
                 setTimeout(function() {
                     if (abort == false) {
-                     typeWriter(id, arr);    
+                     typeWriter(id, arr);
                     }
                 }, speedForward);
-            }  
+            }
         }
         else if (i == aString.length) {
             isBackspacing = true;
             setTimeout(function() {
                 if (abort == false) {
-                     typeWriter(id, arr);    
+                     typeWriter(id, arr);
                     }
             }, speedWait);
         }
@@ -89,14 +90,14 @@ function typeWriter(id, arr) {
             } else if (eHeader.innerHTML.length > 0) {
                   eParagraph.classList.remove("cursor");
                   eHeader.classList.add("cursor");
-                
+
                 eHeader.innerHTML = eHeader.innerHTML.substr(0, eHeader.innerHTML.length - 1);
             }
              setTimeout(function() {
                  if (abort == false) {
-                     typeWriter(id, arr);    
+                     typeWriter(id, arr);
                     }
-             }, speedBackspace);   
+             }, speedBackspace);
         }
 
         else {
@@ -106,14 +107,9 @@ function typeWriter(id, arr) {
             a = (a + 1) % arr.length;
             setTimeout(function() {
                 if (abort == false) {
-                     typeWriter(id, arr);    
+                     typeWriter(id, arr);
                     }
             }, 50);
         }
     }
 };
-
-
-
-
-
