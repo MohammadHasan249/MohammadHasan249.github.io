@@ -2,6 +2,7 @@ var hamburger_menu = document.querySelector(".hamburger-menu");
 var container = document.querySelector(".container");
 var playButton = document.getElementById("playpause");
 var playIcon = document.getElementById("btnIcon");
+var header = document.getElementById("headerProject");
 
 var i = 0, a = 0, isBackspacing = false, isParagraph = false;
 var abort = true;
@@ -11,14 +12,20 @@ var texts = [
     "I am a CS Specialist at University of Toronto|I am actively looking for a PEY/Co-Op internship!",
     "On the menu bar, you'll find a Projects page|This page consists a list of projects that I've worked on, and I'll be constantly updating that page :)",
     "And a Courses page|Here, you'll find a list of courses I've done, whether in uni or in my free time",
-    "If you go to my About page, do check out my email icon|kind of cheesy but hey, that's life <3",
+    "If you go to my About page, do click on my email icon|kind of cheesy but hey, that's life <3",
     "Oh, before I let you go|This runs in a loop, so I'd recommend clicking the button to pause it :)"
 ];
 
-var speedForward = 100, speedWait = 1000, speedBetweenLines = 1000, speedBackspace = 25;
+var speedForward = 100, speedWait = 800, speedBetweenLines = 900, speedBackspace = 15;
 
 hamburger_menu.addEventListener("click", () => {
     container.classList.toggle("active");
+})
+
+header.addEventListener("click", () => {
+    if (container.classList.contains("active")) {
+      container.classList.remove("active");
+    }
 })
 
 playButton.onclick = function() {
