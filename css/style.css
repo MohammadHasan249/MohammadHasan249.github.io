@@ -1,7 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
 
 body {
@@ -78,7 +76,7 @@ body {
                 -5px -5px 15px rgba(255, 255, 255, 0.1);
 }
 
-.cardnew:hover {
+.hovering:hover {
     transform: translateY(-20px);
     box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
 }
@@ -103,10 +101,6 @@ body {
 
 #languagesdiv {
     margin-top: 20px;
-}
-
-.certificates {
-    
 }
 
 .heading {
@@ -139,15 +133,15 @@ body {
     color: white;
 }
 
+.items {
+    margin-left: 150px;
+}
+
 .items li {
     display: inline-block;
 }
 
 .items li img {
-    width: 100%;
-}
-
-.itemsContainer {
     width: 100%;
 }
 
@@ -157,11 +151,13 @@ body {
 
 .portfolioItem {
     height: 400px;
-    margin-left: 170px;
 }
 
-.portfolioItem li {
-    padding-left: 50px;
+.itemButtons h5 {
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding:.67em;
 }
 
 .itemButtons a {
@@ -172,8 +168,6 @@ body {
     margin: 4px 2px;
     cursor: pointer;
     color: white;
-    background-color: #9b59b6;
-    /* background: -webkit-linear-gradient(top, #aaa 0,#000 60%, #555 100%); */
     -webkit-box-shadow: inset 0 -1em 0 .2em rgba(0,0,0,.55);
     border: 1px solid #000;
     -webkit-border-radius:1em;
