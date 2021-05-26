@@ -166,3 +166,37 @@ body {
     -webkit-border-radius:1em;
     padding:.67em;
 }
+
+.contactSection {
+    font-size: 20px;
+    background-color: #1abc9c;
+    padding: 30px 5px;
+}
+
+.contactSection a {
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 2px;
+    text-decoration: none;
+}
+
+.contactSection a:hover {
+    background-color: white;
+    color: #1abc9c;
+}
+
+.socialmedia a {
+    margin-top: 10px;
+    border: none;
+    color: black;
+    font-size: 40px;
+    padding: 0 20px;
+}
+
+.socialmedia p {
+    margin-top: 30px;
+    font-size: 20px;
+}
