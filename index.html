@@ -11,12 +11,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <link rel="stylesheet" text="type/css" href="css/style.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <link rel="stylesheet" text="type/css" href="css/style.css">
   </head>
   <body>
+
+      <div class="loader">
+          <div class="innerLoader"></div>
+      </div>
 
     <div id="slides">
 
@@ -32,16 +36,34 @@
         <div class="heading">
           <p class="name">MOHAMMAD HASAN</p>
           <p class="role typed">
-
           </p>
         </div>
       </div>
 
     </div>
 
-    <div class="section">
-            <h1>Hi! Before you scroll past, this site is still in progress, and should be done by May 26th, 2021 11:59 PM EST.</h1>
-    </div>
+    <nav id="navigation" class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#"><img src="images/MohammadLogo.png" alt="Mohammad Hasan"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
     <div class="section" id="about">
 
@@ -55,8 +77,17 @@
 
               <div class="col-md-7">
                   <h1>Hi, my name is Mohammad Hasan.</h1>
-                  <p id="aboutDescription" class="bold">Honours Bachelors of Computer Science @ University of Toronto</p>
-                  <p></p>
+                  <p id="aboutDescription" class="bold">Computer Science Specialist @ University of Toronto</p>
+
+                  <div class="description">
+                      <p>I am a <span class="bold">4<sup>th</sup> year</span> student pursuing a <span class="bold">Honours Bachelors of Computer Science</span> degree at the <span class="bold">University of Toronto</span> in Ontario, Canada.</p>
+                      <p>I'm currently looking for an internship in any of <span class="bold">Software Engineering</span>, <span class="bold">Software Development</span>, <span class="bold">Web Development</span>, or <span class="bold">Data Science</span>.</p>
+
+                      <p>I have experience programming with many different languages such as <span class="bold">Python</span>, <span class="bold">Java</span>, <span class="bold">C#</span>, and <span class="bold">C</span>.</p>
+                      <p>I also have a background in <span class="bold">Web Development</span>, by using the MERN stack (<span class="bold">MongoDB</span> + <span class="bold">Express</span> + <span class="bold">React</span> + <span class="bold">Node.js</span>), or even through vanilla <span class="bold">JavaScript</span> and <span class="bold">HTML5</span>.</p>
+                  </div>
+
+                  <a id="resume" href="resume.pdf" download>Download Resume</a>
               </div>
 
           </div>
@@ -142,6 +173,13 @@
                           <div class="content">
                               <img src="images/skills/unity.png" alt="Unity & C#">
                               <h2>Unity / C#</h2>
+                          </div>
+                      </div>
+
+                      <div class="cardnew hovering whitebackground">
+                          <div class="content">
+                              <img src="images/skills/git.png" alt="Git">
+                              <h2>Git</h2>
                           </div>
                       </div>
 

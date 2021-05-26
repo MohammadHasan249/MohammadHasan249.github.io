@@ -129,6 +129,10 @@ body {
     color: white;
 }
 
+.itemsContainer {
+    margin-left: 125px;
+}
+
 .items li {
     display: inline-block;
     padding: 10px;
@@ -199,4 +203,68 @@ body {
 .socialmedia p {
     margin-top: 30px;
     font-size: 20px;
+}
+
+#navigation {
+    background-color: #1abc9c;
+    padding: 20px 10px;
+    z-index: 100;
+    width: 100%;
+    height: 100px;
+}
+
+#navigation li {
+    padding: 0 10px;
+}
+
+#navigation li a {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 100%;
+}
+
+.navbar-toggler-icon {
+    background: url('../images/menu.png');
+    background-size: 100%;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: #E3F4FD;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.loader .innerLoader {
+    width: 100%;
+    height: 100%;
+    background: url('../images/loader.gif') center center no-repeat;
+}
+
+.description {
+    padding-top: 50px;
+    font-size: 16px;
+}
+
+#resume {
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid white;
+    border-radius: 2px;
+    text-decoration: none;
 }
