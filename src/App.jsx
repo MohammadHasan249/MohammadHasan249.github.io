@@ -1,5 +1,7 @@
 import './App.css'
 import Hero from "./components/Hero";
+import { WhatIDoSection } from "./components/WhatIDoSection";
+import { ScrollDivider } from "./components/ScrollEffects";
 import { motion } from 'framer-motion';
 
 function App() {
@@ -10,6 +12,8 @@ function App() {
       transition={{ duration: 2.5 }}
     >
       <Hero />
+      <ScrollDivider text={"Scroll to explore"} />
+      <WhatIDoSection />
     </motion.div>
   )
 }
