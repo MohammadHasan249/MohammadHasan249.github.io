@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
 const SkillCard = ({ icon, title, description }) => {
+  // Clone the icon element and add the desired blue text color class
+  const blueIcon = React.cloneElement(icon, {
+    className: `${icon.props.className || ''} text-[#52B2CF]`, // Add the specific blue color class
+  });
+
   return (
     <motion.div
       whileHover={{ y: -5 }}
@@ -12,11 +17,11 @@ const SkillCard = ({ icon, title, description }) => {
       className="group shadow-zinc-950/5"
     >
       <CardHeader className="pb-3">
-        <CardDecorator>{icon}</CardDecorator>
-        <h3 className="mt-6 font-medium">{title}</h3>
+        <CardDecorator>{blueIcon}</CardDecorator>
+        <h3 className="mt-6 text-xl text-center font-semibold">{title}</h3>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-muted-foreground">{description}</p>
+        <p className="text-lg text-muted-foreground">{description}</p>
       </CardContent>
     </motion.div>
   );
@@ -49,39 +54,39 @@ export const WhatIDoSection = ({
   subtitle = "Specialized in creating engaging digital experiences through a combination of design and development skills.",
   skills = [
     {
-      icon: <Palette className="size-6" aria-hidden />,
+      icon: <Palette className="size-10" aria-hidden />,
       title: "UI/UX Design",
       description: "Creating intuitive and visually appealing interfaces that enhance user experience and engagement.",
     },
     {
-      icon: <Code className="size-6" aria-hidden />,
+      icon: <Code className="size-10" aria-hidden />,
       title: "Web Development",
       description: "Building responsive, accessible websites and applications using modern frameworks and technologies.",
     },
     {
-      icon: <Sparkles className="size-6" aria-hidden />,
+      icon: <Sparkles className="size-10" aria-hidden />,
       title: "Creative Direction",
       description: "Guiding projects from concept to completion with a focus on innovation and brand consistency.",
     },
     {
-      icon: <Zap className="size-6" aria-hidden />,
+      icon: <Zap className="size-10" aria-hidden />,
       title: "Performance Optimization",
       description: "Enhancing website speed and efficiency to improve user experience and search engine rankings.",
     },
     {
-      icon: <LineChart className="size-6" aria-hidden />,
+      icon: <LineChart className="size-10" aria-hidden />,
       title: "Analytics & SEO",
       description: "Implementing data-driven strategies to increase visibility and drive meaningful traffic to your site.",
     },
     {
-      icon: <MessageSquare className="size-6" aria-hidden />,
+      icon: <MessageSquare className="size-10" aria-hidden />,
       title: "Content Strategy",
       description: "Developing compelling content that tells your story and connects with your target audience.",
     },
   ],
 }) => {
   return (
-    <section className="bg-muted/50 py-16 md:py-32 dark:bg-transparent">
+    <section id="what-i-do" className="bg-muted/50 py-16 md:py-32 dark:bg-transparent">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center">
           <motion.h2 
@@ -96,7 +101,7 @@ export const WhatIDoSection = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-muted-foreground max-w-2xl mx-auto"
+            className="mt-4 text-[#52B2CF] text-lg font-semibold max-w-2xl mx-auto"
           >
             {subtitle}
           </motion.p>

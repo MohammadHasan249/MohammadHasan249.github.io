@@ -11,9 +11,20 @@ export function ScrollDivider({
   color = "bg-foreground",
   text,
   animated = true,
+  scrollTo = "#what-i-do",
 }) {
+  const handleClick = () => {
+    const element = document.querySelector(scrollTo);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className={cn("flex w-full flex-col items-center justify-center pt-2", className)}>
+    <div 
+      className={cn("flex w-full flex-col items-center justify-center py-8 cursor-pointer", className)}
+      onClick={handleClick}
+    >
       {text && (
         <p className="mb-2 text-lg font-medium text-muted-foreground">
           {text}
@@ -28,7 +39,7 @@ export function ScrollDivider({
             duration: 1.5,
             ease: "easeInOut"
           } : undefined}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-background cursor-pointer"
         >
           <ChevronDown className="h-5 w-5 text-foreground" />
         </motion.div>
@@ -44,4 +55,5 @@ ScrollDivider.propTypes = {
   color: PropTypes.string,
   text: PropTypes.string,
   animated: PropTypes.bool,
+  scrollTo: PropTypes.string,
 };
