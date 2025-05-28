@@ -74,7 +74,7 @@ export const AboutSection = ({
             </div>
             
             <motion.a
-              href="/Mohammad_Hasan_Resume.pdf"
+              href="/portfolio/Mohammad_Hasan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-[#52B2CF] text-white py-3 rounded-lg font-medium hover:bg-[#3e9bb8] transition-colors"
