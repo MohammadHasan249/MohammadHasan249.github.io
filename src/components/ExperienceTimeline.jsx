@@ -183,7 +183,7 @@ export const ExperienceTimeline = ({
             className="mt-12 flex justify-center relative z-10"
           >
             <a 
-              href="/resume.pdf" 
+              href="/Mohammad_Hasan_Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#52B2CF] hover:underline font-medium bg-black/30 px-4 py-2 rounded-full"

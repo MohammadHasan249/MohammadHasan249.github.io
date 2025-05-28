@@ -19,7 +19,7 @@ export default function Hero() {
   }, [index]);
 
   return (
-    <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-16 px-4 overflow-hidden bg-gradient-to-b from-[#1F2937] to-[#111827]">
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-16 px-4 overflow-hidden">
       {/* Main Heading */}
       <h1 className="z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-center text-white drop-shadow-xl">
         Mohammad Hasan
@@ -54,7 +54,7 @@ export default function Hero() {
             Get in Touch
         </a>
         <a
-            href="/resume.pdf"
+            href="/Mohammad_Hasan_Resume.pdf"
             target="_blank"
             rel="noopener"
             className="px-6 py-3 rounded-lg font-semibold border border-[#7EC4CF] text-[#7EC4CF] hover:bg-[#7EC4CF] hover:text-white transition-all duration-200"

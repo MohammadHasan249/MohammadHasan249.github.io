@@ -3,6 +3,8 @@ import Hero from "./components/Hero";
 import { WhatIDoSection } from "./components/WhatIDoSection";
 import { ExperienceTimeline } from "./components/ExperienceTimeline";
 import { ProjectsSection } from "./components/ProjectsSection";
+import { AboutSection } from "./components/AboutSection";
+import { ContactSection } from "./components/ContactSection";
 import { ScrollDivider } from "./components/ScrollEffects";
 import { motion } from 'framer-motion';
 
@@ -17,7 +19,9 @@ function App() {
       <ScrollDivider text={"Scroll to explore"} />
       <WhatIDoSection />
       <ExperienceTimeline />
+      <AboutSection />
       <ProjectsSection />
+      <ContactSection />
     </motion.div>
   )
 }

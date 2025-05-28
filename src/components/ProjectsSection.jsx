@@ -190,11 +190,7 @@ export const ProjectsSection = ({
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
-          <div className="inline-flex items-center gap-2 p-1.5 bg-white/5 border border-[#52B2CF]/20 rounded-full mb-2 shadow-lg">
-            <div className="flex items-center gap-1.5 ml-3 mr-2">
-              <Filter className="w-5 h-5 text-[#52B2CF]" />
-              <span className="text-sm font-medium text-muted-foreground">Filter:</span>
-            </div>
+          <div className="inline-flex items-center gap-2 p-1.5 mb-2">
             {categories.map((category) => (
               <motion.button
                 key={category}
@@ -205,7 +201,7 @@ export const ProjectsSection = ({
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-all ${
                   selectedCategory === category
                     ? "bg-[#52B2CF] text-white shadow-md shadow-[#52B2CF]/20"
-                    : "hover:bg-white/10 hover:shadow-md"
+                    : "hover:bg-white hover:shadow-md hover:text-[#52B2CF]"
                 }`}
               >
                 {category}
