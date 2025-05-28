@@ -1,6 +1,7 @@
 import './App.css'
 import Hero from "./components/Hero";
 import { WhatIDoSection } from "./components/WhatIDoSection";
+import { ExperienceTimeline } from "./components/ExperienceTimeline";
 import { ScrollDivider } from "./components/ScrollEffects";
 import { motion } from 'framer-motion';
 
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <ScrollDivider text={"Scroll to explore"} />
       <WhatIDoSection />
+      <ExperienceTimeline />
     </motion.div>
   )
 }
