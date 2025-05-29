@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Linkedin, Github, ExternalLink, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin, Github, ExternalLink, Send, CheckCircle, AlertCircle } from "lucide-react";
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailjs';
 import PropTypes from "prop-types";
 
 export const ContactSection = ({
@@ -22,8 +24,62 @@ export const ContactSection = ({
     },
   ]
 }) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: email, // Your email address
+      };
+
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
+  };
+
   return (
-    <section id="contact" className="py-16 md:py-24 bg-muted/20 dark:bg-black/20">
+    <section id="contact" className="pt-16 md:pt-24 bg-muted/20 dark:bg-black/20">
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center mb-16">
           <motion.h2 
@@ -130,15 +186,44 @@ export const ContactSection = ({
             className="bg-white/5 border border-[#52B2CF]/20 rounded-lg p-8 shadow-lg"
           >
             <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
-            <form className="space-y-6">
+            
+            {submitStatus && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className={`mb-6 p-4 rounded-lg flex items-center gap-2 ${
+                  submitStatus === 'success' 
+                    ? 'bg-green-500/10 border border-green-500/20 text-green-500' 
+                    : 'bg-red-500/10 border border-red-500/20 text-red-500'
+                }`}
+              >
+                {submitStatus === 'success' ? (
+                  <>
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Message sent successfully! I'll get back to you soon.</span>
+                  </>
+                ) : (
+                  <>
+                    <AlertCircle className="w-5 h-5" />
+                    <span>Failed to send message. Please try again or email me directly.</span>
+                  </>
+                )}
+              </motion.div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1.5">
-                    Your Name
+                    Your Name *
                   </label>
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
                     placeholder="John Doe"
                   />
@@ -146,11 +231,15 @@ export const ContactSection = ({
                 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium mb-1.5">
-                    Your Email
+                    Your Email *
                   </label>
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
                     placeholder="john@example.com"
                   />
@@ -158,11 +247,15 @@ export const ContactSection = ({
                 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium mb-1.5">
-                    Subject
+                    Subject *
                   </label>
                   <input
                     type="text"
                     id="subject"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
                     className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
                     placeholder="Project Inquiry"
                   />
@@ -170,10 +263,14 @@ export const ContactSection = ({
                 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-1.5">
-                    Message
+                    Message *
                   </label>
                   <textarea
                     id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                     rows={5}
                     className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors resize-none"
                     placeholder="Your message here..."
@@ -183,15 +280,44 @@ export const ContactSection = ({
               
               <motion.button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 bg-[#52B2CF] text-white py-3 px-6 rounded-md font-medium hover:bg-[#3e9bb8] transition-colors"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                disabled={isSubmitting}
+                className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-md font-medium transition-colors ${
+                  isSubmitting 
+                    ? 'bg-[#52B2CF]/50 cursor-not-allowed' 
+                    : 'bg-[#52B2CF] hover:bg-[#3e9bb8]'
+                } text-white`}
+                whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               >
-                Send Message <Send className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message <Send className="w-4 h-4" />
+                  </>
+                )}
               </motion.button>
             </form>
           </motion.div>
         </div>
+        
+        {/* Footer */}
+        <motion.footer 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-16 pt-8 pb-4 border-t border-[#52B2CF]/10"
+        >
+          <div className="text-center">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Mohammad Hasan. All rights reserved.
+            </p>
+          </div>
+        </motion.footer>
       </div>
     </section>
   );

@@ -47,12 +47,17 @@ export default function Hero() {
       </h3>
       {/* Call to Action */}
       <div className="z-10 mt-10 flex flex-wrap justify-center gap-4 text-lg">
-        <a
-            href="#contact"
-            className="px-6 py-3 rounded-lg bg-[#5DE5DB] text-white font-semibold shadow-md hover:bg-[#46d2c9] transition-all duration-200"
+        <button
+            onClick={() => {
+              const section = document.getElementById('contact');
+              if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="px-6 py-3 rounded-lg bg-[#5DE5DB] text-white font-semibold shadow-md hover:bg-[#46d2c9] transition-all duration-200 cursor-pointer"
         >
             Get in Touch
-        </a>
+        </button>
         <a
             href="/portfolio/Mohammad_Hasan_Resume.pdf"
             target="_blank"

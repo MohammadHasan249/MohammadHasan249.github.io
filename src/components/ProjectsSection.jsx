@@ -87,45 +87,94 @@ export const ProjectsSection = ({
     {
       title: "QuickForms",
       description: "A dynamic form-building web app utilizing Next.js and React, offering intuitive design capabilities with Tailwind CSS for customizable, embeddable forms. Incorporated Prisma for robust database management, allowing for seamless integration of form submissions with a variety of CRM systems, through each of their individual APIs, optimizing data flow and user engagement.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&h=825",
+      image: "https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       githubUrl: "https://github.com/MohammadHasan249",
-      categories: ["Web App"]
+      categories: ["Websites", "Applications"]
     },
     {
       title: "Controlify",
       description: "A full-stack web app that uses the Spotify API to allow users to login with their Spotify accounts, join rooms with other users, and control what music to play together. Built with React frontend and Django backend for seamless music collaboration.",
-      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1470&h=825",
+      image: "https://plus.unsplash.com/premium_photo-1682125896993-12a1758b6cb3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       githubUrl: "https://github.com/MohammadHasan249",
-      categories: ["Web App"]
+      liveUrl: "https://mohammadhasan249.github.io/",
+      categories: ["Websites", "Applications"]
     },
     {
       title: "Job Applications Tracker",
       description: "A comprehensive full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) to help users efficiently track and manage their job applications throughout their career search process.",
-      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1471&h=825",
+      image: "/portfolio/images/jobstracker.jpg",
       githubUrl: "https://github.com/MohammadHasan249",
-      categories: ["Web App"]
+      liveUrl: "https://mohammadhasan249.github.io/",
+      categories: ["Websites", "Applications"]
     },
     {
-      title: "HiGarden - The Guardian App",
-      description: "A planting simulator game developed in C# and Unity with a team of seven in an Agile environment. Advanced the game by adding several new levels and optimized performance, reducing game size by 73% using design techniques such as object pooling.",
-      image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1470&h=825",
+      title: "Dodge Time",
+      description: "Grab your friends and play a futuristic multiplayer dodgeball knockout game with clones. A fast-paced multiplayer game built with Unity featuring real-time multiplayer mechanics and engaging gameplay.",
+      image: "/portfolio/images/dodgetime.jpg",
       githubUrl: "https://github.com/MohammadHasan249",
+      liveUrl: "https://mohammadhasan249.github.io/",
       categories: ["Game"]
     },
     {
-      title: "Anti-Piracy Tool",
-      description: "Developed an anti-piracy tool at SideFX Software that effectively identified unauthorized use of Houdini software by both individual and corporate users, contributing to a 20% increase in protected intellectual property.",
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1470&h=825",
+      title: "Gladiator's Dilemma",
+      description: "You have one objective: Survive. Loyalties are tested in this intense multiplayer game. A moral dilemma-based survival game where players must make tough decisions to stay alive.",
+      image: "/portfolio/images/gdtitlepic.PNG",
       githubUrl: "https://github.com/MohammadHasan249",
-      categories: ["Web App"]
+      liveUrl: "https://mohammadhasan249.github.io/",
+      categories: ["Game"]
     },
     {
-      title: "MetaVision 2D Game",
-      description: "A 2D game developed in C# and Unity with integrated Smart contracts through REST API development. Created comprehensive documentation for the entire workflow and contributed to launching the prototype 3 weeks ahead of schedule.",
-      image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?q=80&w=1372&h=825",
+      title: "E-Commerce App",
+      description: "An online shopping platform to purchase items online easily. Both a website and an Android app. Complete e-commerce solution with shopping cart, payment integration, and user management.",
+      image: "/portfolio/images/checkout.jpg",
       githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["Websites", "Applications"]
+    },
+    {
+      title: "Math Speed Run",
+      description: "Test your Math skills and see how many you can get right within 60 seconds. A time-based arithmetic challenge game that tests mathematical abilities under pressure.",
+      image: "/portfolio/images/calculator.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      liveUrl: "https://mohammadhasan249.github.io/",
+      categories: ["Websites", "Applications", "Game"]
+    },
+    {
+      title: "Motion Detector",
+      description: "A motion sensor which detects and tracks movement, and then outputs it onto a time-based graph. Advanced computer vision application for motion tracking and analysis.",
+      image: "/portfolio/images/cctv.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["ML / AI"]
+    },
+    {
+      title: "Android Game Bundle",
+      description: "A bundle of three mini-games: whack-a-mole, a Math arithmetic game, and a card memory game. Comprehensive Android gaming package with multiple entertaining games.",
+      image: "/portfolio/images/cards.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["Applications", "Game"]
+    },
+    {
+      title: "Ninja Turtles Race",
+      description: "Ever wondered who the fastest Ninja Turtle really is? Is it Leo? Raphael? Well, let's put it to the test. A fun racing game featuring the beloved Ninja Turtles characters.",
+      image: "/portfolio/images/ninjaturtles.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      liveUrl: "https://mohammadhasan249.github.io/",
       categories: ["Game"]
-    }
+    },
+    {
+      title: "JARVIS Virtual Assistant",
+      description: "A JARVIS-like virtual assistant that listens to several commands, and acts on them. Voice-controlled AI assistant with natural language processing capabilities.",
+      image: "/portfolio/images/jarvis.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["ML / AI"]
+    },
+    {
+      title: "Fruit Ninja Clone",
+      description: "A remastered version of the classic mobile game Fruit Ninja, purely for the web. Engaging web-based game with smooth animations and responsive controls.",
+      image: "/portfolio/images/fruitninja.png",
+      githubUrl: "https://github.com/MohammadHasan249",
+      liveUrl: "https://mohammadhasan249.github.io/",
+      categories: ["Websites", "Applications", "Game"]
+    },
   ],
 }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");

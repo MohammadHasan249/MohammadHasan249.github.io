@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 export const AboutSection = ({
   title = "About Me",
   subtitle = "Get to know me better",
-  imageSrc = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1480&h=1925",
+  imageSrc = "/portfolio/images/avatar.png",
   bio = "I'm a passionate web developer and software engineer with a strong foundation in computer science and practical experience in modern development technologies. Currently working as a Web Developer at SideFX Software Inc., I specialize in developing anti-piracy tools, automating licensing processes, and building internal tools that streamline business operations.",
   longBio = [
     "My journey in software development began during my studies at the University of Toronto, where I earned a Bachelor of Science with a Specialist in Computer Science. My coursework included Data Structures & Algorithms, Full-Stack Web Development, Neural Networks & Deep Learning, and Video Game Design, giving me a well-rounded foundation in both theoretical and practical aspects of computer science.",
@@ -113,14 +113,19 @@ export const AboutSection = ({
             <div className="bg-white/5 border border-[#52B2CF]/20 rounded-lg p-6 shadow-lg">
               <h3 className="text-lg font-semibold mb-3">Want to work together?</h3>
               <p className="text-muted-foreground mb-4">I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.</p>
-              <motion.a 
-                href="#contact" 
-                className="inline-flex items-center gap-1.5 text-[#52B2CF] font-medium hover:underline"
+              <motion.button 
+                onClick={() => {
+                  const section = document.getElementById('contact');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                  }
+                }}
+                className="inline-flex items-center gap-1.5 text-[#52B2CF] font-medium hover:underline cursor-pointer bg-transparent border-none"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 Get in touch <ArrowRight className="w-4 h-4" />
-              </motion.a>
+              </motion.button>
             </div>
           </motion.div>
         </div>

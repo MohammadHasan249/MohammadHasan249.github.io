@@ -13,31 +13,31 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
   };
   
   return (
-    <div className={`flex items-center mb-16 last:mb-0 relative ${isEven ? 'justify-start' : 'justify-end'}`}>
+    <div className={`flex items-center mb-16 last:mb-0 relative ${isEven ? 'md:justify-start justify-start' : 'md:justify-end justify-start'}`}>
       {/* Content box */}
       <motion.div 
         initial={{ opacity: 0, x: isEven ? -20 : 20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className={`w-[calc(50%-30px)] bg-white/5 border border-[#52B2CF]/20 rounded-lg shadow-lg relative cursor-pointer group`}
+        className={`w-full md:w-[calc(50%-30px)] ml-0 md:ml-0 ${!isEven ? 'md:mr-0' : ''} bg-white/5 border border-[#52B2CF]/20 rounded-lg shadow-lg relative cursor-pointer group`}
         onClick={toggleExpand}
       >
-        {/* Arrow pointing to timeline */}
+        {/* Arrow pointing to timeline - hidden on mobile */}
         <div 
-          className={`absolute top-1/2 -mt-10 w-4 h-4 rotate-45 border-t border-r border-[#52B2CF]/20 bg-white/5 ${
+          className={`absolute top-1/2 -mt-10 w-4 h-4 rotate-45 border-t border-r border-[#52B2CF]/20 bg-white/5 hidden md:block ${
             isEven ? 'right-[-8px]' : 'left-[-8px] rotate-[225deg]'
           }`}
         ></div>
         
-        <div className="p-6">
+        <div className="p-4 md:p-6">
           <div className="flex items-center gap-3 mb-3">
-            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#52B2CF]/10 flex items-center justify-center">
-              <Icon className="w-5 h-5 text-[#52B2CF]" />
+            <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-[#52B2CF]/10 flex items-center justify-center">
+              <Icon className="w-4 h-4 md:w-5 md:h-5 text-[#52B2CF]" />
             </div>
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-[#52B2CF]" />
-              <span className="text-sm font-medium text-[#52B2CF]">{year}</span>
+              <Calendar className="w-3 h-3 md:w-4 md:h-4 text-[#52B2CF]" />
+              <span className="text-xs md:text-sm font-medium text-[#52B2CF]">{year}</span>
             </div>
             <motion.div 
               className="ml-auto" 
@@ -48,8 +48,8 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
             </motion.div>
           </div>
           
-          <h3 className="text-xl font-semibold mb-1">{title}</h3>
-          <h4 className="text-lg text-muted-foreground mb-2">{organization}</h4>
+          <h3 className="text-lg md:text-xl font-semibold mb-1">{title}</h3>
+          <h4 className="text-base md:text-lg text-muted-foreground mb-2">{organization}</h4>
           
           <AnimatePresence>
             {isExpanded && (
@@ -61,7 +61,7 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
                 className="overflow-hidden"
               >
                 <div className="pt-2 border-t border-[#52B2CF]/10 mt-2">
-                  <p className="text-muted-foreground">{description}</p>
+                  <p className="text-sm md:text-base text-muted-foreground">{description}</p>
                 </div>
               </motion.div>
             )}
@@ -69,15 +69,15 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
         </div>
       </motion.div>
       
-      {/* Center dot */}
+      {/* Center dot - adjusted for mobile */}
       <motion.div 
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.3, delay: 0.2 }}
         viewport={{ once: true }}
-        className="absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#52B2CF] z-10 flex items-center justify-center"
+        className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#52B2CF] z-10 flex items-center justify-center"
       >
-        <div className="w-3 h-3 rounded-full bg-white"></div>
+        <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white"></div>
       </motion.div>
     </div>
   );
@@ -136,12 +136,12 @@ export const ExperienceTimeline = ({
   return (
     <section id="experience" className="py-8 md:py-16">
       <div className="container mx-auto max-w-5xl px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-balance text-4xl font-semibold lg:text-5xl"
+            className="text-balance text-3xl md:text-4xl lg:text-5xl font-semibold"
           >
             {title}
           </motion.h2>
@@ -149,7 +149,7 @@ export const ExperienceTimeline = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-[#52B2CF] text-lg font-semibold max-w-2xl mx-auto"
+            className="mt-4 text-[#52B2CF] text-base md:text-lg font-semibold max-w-2xl mx-auto"
           >
             {subtitle}
           </motion.p>
@@ -157,19 +157,19 @@ export const ExperienceTimeline = ({
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-3 text-sm text-muted-foreground"
+            className="mt-3 text-xs md:text-sm text-muted-foreground"
           >
             <span className="inline-flex items-center gap-1">
-              <ChevronDown className="w-4 h-4" /> Click on any entry to view details
+              <ChevronDown className="w-3 h-3 md:w-4 md:h-4" /> Click on any entry to view details
             </span>
           </motion.p>
         </div>
         
         <div className="relative">
-          {/* Central vertical line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#52B2CF] to-[#52B2CF]/20"></div>
+          {/* Central vertical line - adjusted for mobile */}
+          <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#52B2CF] to-[#52B2CF]/20"></div>
           
-          <div className="relative z-10">
+          <div className="relative z-10 pl-12 md:pl-0">
             {experiences.map((exp, index) => (
               <TimelineItem
                 key={index}
@@ -187,15 +187,15 @@ export const ExperienceTimeline = ({
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12 flex justify-center relative z-10"
+            className="mt-8 md:mt-12 flex justify-center relative z-10"
           >
             <a 
               href="/portfolio/Mohammad_Hasan_Resume.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#52B2CF] hover:underline font-medium bg-black/30 px-4 py-2 rounded-full"
+              className="flex items-center gap-2 text-[#52B2CF] hover:underline font-medium bg-black/30 px-3 md:px-4 py-2 rounded-full text-sm md:text-base"
             >
-              View Full Resume <ArrowRight className="w-4 h-4" />
+              View Full Resume <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
             </a>
           </motion.div>
         </div>
