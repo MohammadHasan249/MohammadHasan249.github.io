@@ -86,7 +86,7 @@ export const ProjectsSection = ({
   projects = [
     {
       title: "QuickForms",
-      description: "A dynamic form-building web app utilizing Next.js and React, offering intuitive design capabilities with Tailwind CSS for customizable, embeddable forms. Incorporated Prisma for robust database management, allowing for seamless integration of form submissions with a variety of CRM systems, through each of their individual APIs, optimizing data flow and user engagement.",
+      description: "A dynamic form-building web app utilizing Next.js and Prisma, offering customizable, embeddable forms. Seamlessly integrated form submissions with a variety of CRMs, through each of their individual APIs, optimizing data flow and user engagement.",
       image: "https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       githubUrl: "https://github.com/MohammadHasan249",
       categories: ["Websites", "Applications"]
