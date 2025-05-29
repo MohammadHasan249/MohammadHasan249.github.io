@@ -104,7 +104,7 @@ export const ExperienceTimeline = ({
       type: "work"
     },
     {
-      year: "Mar 2022 - Aug 2022",
+      year: "Jun 2021 - Oct 2022",
       title: "Software Engineer",
       organization: "MetaVision Labs",
       description: "Developed a 2D game in C# and Unity and helped design the vision and implementation of game features. Integrated Smart contracts into the game by developing a REST API that retrieves contract data and updates the game. Created documentation for the entire workflow of the game and the tests, as well as all the previous and potential errors. Developed company website in React and engineered SEO for the website in order to attract visitors. Performed product design role and helped in launching prototype 3 weeks earlier than planned.",
@@ -128,7 +128,7 @@ export const ExperienceTimeline = ({
       year: "Sep 2018 - Jan 2022",
       title: "Bachelor of Science, Specialist in Computer Science",
       organization: "University of Toronto",
-      description: "Relevant Coursework: Data Structures & Algorithms, Software Design, Full-Stack Web Development, Database Design, Neural Networks & Deep Learning, Natural Language Processing, Operating Systems, Video Game Design. Graduated with strong foundation in computer science fundamentals and practical experience in modern development technologies.",
+      description: "Graduated with strong foundation in computer science fundamentals and practical experience in modern development technologies.",
       type: "education"
     }
   ],

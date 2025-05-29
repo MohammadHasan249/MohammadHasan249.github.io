@@ -7,18 +7,18 @@ export const AboutSection = ({
   title = "About Me",
   subtitle = "Get to know me better",
   imageSrc = "/portfolio/images/avatar.png",
-  bio = "I'm a passionate web developer and software engineer with a strong foundation in computer science and practical experience in modern development technologies. Currently working as a Web Developer at SideFX Software Inc., I specialize in developing anti-piracy tools, automating licensing processes, and building internal tools that streamline business operations.",
+  bio = "Hey, I'm a web developer and software engineer who loves building cool, useful stuff with code. I actually got into programming through Minecraft—modding servers and writing plugins was my gateway into the world of software. That curiosity never left, and it eventually grew into a full-blown career.",
   longBio = [
-    "My journey in software development began during my studies at the University of Toronto, where I earned a Bachelor of Science with a Specialist in Computer Science. My coursework included Data Structures & Algorithms, Full-Stack Web Development, Neural Networks & Deep Learning, and Video Game Design, giving me a well-rounded foundation in both theoretical and practical aspects of computer science.",
-    "I have extensive experience across the full technology stack, with expertise in Python, Java, C#, JavaScript, and modern frameworks like React, Django, and Unity. My professional experience spans web development, game development, and enterprise software solutions. I've successfully delivered projects ranging from anti-piracy tools that increased IP protection by 20% to 2D games that launched 3 weeks ahead of schedule.",
-    "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and solving complex problems that make a real impact. I'm constantly learning and evolving as a developer, always eager to take on new challenges that push the boundaries of what's possible with technology."
+    "Right now, I work at SideFX Software, where I focus on creating internal tools, automating processes, and making systems that just work better for everyone. I enjoy solving real problems with clean, scalable solutions, and I’m always thinking about how to make things more efficient or user-friendly.",
+    "I'm big on modern technologies — Next.js, AWS, that whole stack — and I’ve worked across a bunch of different areas: from building web apps and business tools to game development and everything in between. I like fast feedback loops, shipping things that matter, and constantly learning along the way.",
+    "Outside of work, I’m usually exploring new tech, building side projects, contributing to open-source, or chasing down ideas that could turn into something bigger. I'm always up for a challenge, especially when it blurs the line between creativity and code."
   ],
   contactInfo = {
     email: "mohdhasan.mah@gmail.com",
     location: "Toronto, ON"
   },
   skills = [
-    "Python", "Java", "C#", "JavaScript", "HTML/CSS", "SQL", 
+    "Python", "Java", "C#", "JavaScript", "HTML/CSS", "SQL", "Next.js",
     "React", "Node.js", "Django", "Flask", "Unity", "Angular", "Vue",
     "PostgreSQL", "MongoDB", "Git", "AWS", "TensorFlow", "PyTorch"
   ]
