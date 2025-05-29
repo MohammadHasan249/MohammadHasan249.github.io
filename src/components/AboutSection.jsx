@@ -7,20 +7,20 @@ export const AboutSection = ({
   title = "About Me",
   subtitle = "Get to know me better",
   imageSrc = "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1480&h=1925",
-  bio = "I'm a passionate web developer and designer with a strong focus on creating beautiful, functional, and user-centered digital experiences. With 5+ years of experience in the field, I've worked on a diverse range of projects, from small business websites to complex web applications.",
+  bio = "I'm a passionate web developer and software engineer with a strong foundation in computer science and practical experience in modern development technologies. Currently working as a Web Developer at SideFX Software Inc., I specialize in developing anti-piracy tools, automating licensing processes, and building internal tools that streamline business operations.",
   longBio = [
-    "My journey in web development began when I built my first website at the age of 16. What started as a hobby quickly evolved into a passion, leading me to pursue a degree in Computer Science and eventually a career in web development.",
-    "I specialize in frontend development, with expertise in modern JavaScript frameworks like React and Next.js. I'm also proficient in backend technologies and have experience with full-stack development. My approach to design is minimalist and user-focused, aiming to create intuitive interfaces that provide exceptional user experiences.",
-    "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through blog posts and tutorials. I'm constantly learning and evolving as a developer, always eager to take on new challenges and expand my skill set."
+    "My journey in software development began during my studies at the University of Toronto, where I earned a Bachelor of Science with a Specialist in Computer Science. My coursework included Data Structures & Algorithms, Full-Stack Web Development, Neural Networks & Deep Learning, and Video Game Design, giving me a well-rounded foundation in both theoretical and practical aspects of computer science.",
+    "I have extensive experience across the full technology stack, with expertise in Python, Java, C#, JavaScript, and modern frameworks like React, Django, and Unity. My professional experience spans web development, game development, and enterprise software solutions. I've successfully delivered projects ranging from anti-piracy tools that increased IP protection by 20% to 2D games that launched 3 weeks ahead of schedule.",
+    "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and solving complex problems that make a real impact. I'm constantly learning and evolving as a developer, always eager to take on new challenges that push the boundaries of what's possible with technology."
   ],
   contactInfo = {
-    email: "hello@yourname.com",
-    location: "San Francisco, CA"
+    email: "mohdhasan.mah@gmail.com",
+    location: "Toronto, ON"
   },
   skills = [
-    "React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", 
-    "Tailwind CSS", "Node.js", "Express", "MongoDB", "UI/UX Design",
-    "Responsive Design"
+    "Python", "Java", "C#", "JavaScript", "HTML/CSS", "SQL", 
+    "React", "Node.js", "Django", "Flask", "Unity", "Angular", "Vue",
+    "PostgreSQL", "MongoDB", "Git", "AWS", "TensorFlow", "PyTorch"
   ]
 }) => {
   return (

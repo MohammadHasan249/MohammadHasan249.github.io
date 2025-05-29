@@ -85,49 +85,45 @@ export const ProjectsSection = ({
   subtitle = "A showcase of my recent work and personal projects",
   projects = [
     {
-      title: "E-Commerce Dashboard",
-      description: "A fully responsive admin dashboard for e-commerce platforms with real-time analytics and inventory management.",
+      title: "QuickForms",
+      description: "A dynamic form-building web app utilizing Next.js and React, offering intuitive design capabilities with Tailwind CSS for customizable, embeddable forms. Incorporated Prisma for robust database management, allowing for seamless integration of form submissions with a variety of CRM systems, through each of their individual APIs, optimizing data flow and user engagement.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470&h=825",
-      liveUrl: "https://example.com/demo",
-      githubUrl: "https://github.com/username/project",
+      githubUrl: "https://github.com/MohammadHasan249",
       categories: ["Web App"]
     },
     {
-      title: "Mobile Recipe App",
-      description: "A cross-platform mobile application that allows users to discover, save and share cooking recipes.",
-      image: "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?q=80&w=1374&h=825",
-      liveUrl: "https://example.com/demo2",
-      githubUrl: "https://github.com/username/project2",
-      categories: ["Mobile App"]
+      title: "Controlify",
+      description: "A full-stack web app that uses the Spotify API to allow users to login with their Spotify accounts, join rooms with other users, and control what music to play together. Built with React frontend and Django backend for seamless music collaboration.",
+      image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1470&h=825",
+      githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["Web App"]
     },
     {
-      title: "3D Puzzle Game",
-      description: "An immersive 3D puzzle game built with Unity, featuring procedurally generated levels and physics-based gameplay.",
-      image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?q=80&w=1372&h=825",
-      liveUrl: "https://example.com/demo3",
-      githubUrl: "https://github.com/username/project3",
+      title: "Job Applications Tracker",
+      description: "A comprehensive full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) to help users efficiently track and manage their job applications throughout their career search process.",
+      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1471&h=825",
+      githubUrl: "https://github.com/MohammadHasan249",
+      categories: ["Web App"]
+    },
+    {
+      title: "HiGarden - The Guardian App",
+      description: "A planting simulator game developed in C# and Unity with a team of seven in an Agile environment. Advanced the game by adding several new levels and optimized performance, reducing game size by 73% using design techniques such as object pooling.",
+      image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1470&h=825",
+      githubUrl: "https://github.com/MohammadHasan249",
       categories: ["Game"]
     },
     {
-      title: "Personal Finance Tracker",
-      description: "A web application that helps users track expenses, set budgets, and visualize spending patterns with interactive charts.",
-      image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=1471&h=825",
-      liveUrl: "https://example.com/demo4",
-      githubUrl: "https://github.com/username/project4",
+      title: "Anti-Piracy Tool",
+      description: "Developed an anti-piracy tool at SideFX Software that effectively identified unauthorized use of Houdini software by both individual and corporate users, contributing to a 20% increase in protected intellectual property.",
+      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1470&h=825",
+      githubUrl: "https://github.com/MohammadHasan249",
       categories: ["Web App"]
     },
     {
-      title: "AR Navigation App",
-      description: "An augmented reality application that overlays navigation instructions on the real world through the camera view.",
-      image: "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?q=80&w=1470&h=825",
-      githubUrl: "https://github.com/username/project5",
-      categories: ["Mobile App"]
-    },
-    {
-      title: "2D Platform Game",
-      description: "A retro-style platform game with pixel art graphics and challenging levels inspired by classic console games.",
-      image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1470&h=825",
-      liveUrl: "https://example.com/demo6",
+      title: "MetaVision 2D Game",
+      description: "A 2D game developed in C# and Unity with integrated Smart contracts through REST API development. Created comprehensive documentation for the entire workflow and contributed to launching the prototype 3 weeks ahead of schedule.",
+      image: "https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?q=80&w=1372&h=825",
+      githubUrl: "https://github.com/MohammadHasan249",
       categories: ["Game"]
     }
   ],

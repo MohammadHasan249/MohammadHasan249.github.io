@@ -8,7 +8,7 @@ export const ContactSection = ({
   subtitle = "Let's work together",
   email = "mohdhasan.mah@gmail.com",
   phone = "+1 (647) 510-0863",
-  location = "San Francisco, CA",
+  location = "Toronto, ON",
   socialLinks = [
     {
       name: "LinkedIn",

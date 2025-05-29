@@ -51,37 +51,37 @@ CardDecorator.propTypes = {
 
 export const WhatIDoSection = ({
   title = "What I Do",
-  subtitle = "Specialized in creating engaging digital experiences through a combination of design and development skills.",
+  subtitle = "Specialized in full-stack development, enterprise software solutions, and game development with a focus on creating efficient, scalable applications.",
   skills = [
     {
-      icon: <Palette className="size-10" aria-hidden />,
-      title: "UI/UX Design",
-      description: "Creating intuitive and visually appealing interfaces that enhance user experience and engagement.",
-    },
-    {
       icon: <Code className="size-10" aria-hidden />,
-      title: "Web Development",
-      description: "Building responsive, accessible websites and applications using modern frameworks and technologies.",
-    },
-    {
-      icon: <Sparkles className="size-10" aria-hidden />,
-      title: "Creative Direction",
-      description: "Guiding projects from concept to completion with a focus on innovation and brand consistency.",
+      title: "Full-Stack Web Development",
+      description: "Building robust web applications using modern frameworks like React, Django, and Node.js. Experienced in creating everything from dynamic form builders to music collaboration platforms.",
     },
     {
       icon: <Zap className="size-10" aria-hidden />,
-      title: "Performance Optimization",
-      description: "Enhancing website speed and efficiency to improve user experience and search engine rankings.",
+      title: "Enterprise Software Solutions",
+      description: "Developing anti-piracy tools, licensing automation systems, and internal workflow tools that streamline business operations and increase productivity by 50%+.",
+    },
+    {
+      icon: <Sparkles className="size-10" aria-hidden />,
+      title: "Game Development",
+      description: "Creating engaging gaming experiences with Unity and C#, from 2D platformers to complex simulation games, with expertise in performance optimization and blockchain integration.",
     },
     {
       icon: <LineChart className="size-10" aria-hidden />,
-      title: "Analytics & SEO",
-      description: "Implementing data-driven strategies to increase visibility and drive meaningful traffic to your site.",
+      title: "Data Science & AI",
+      description: "Leveraging machine learning technologies including TensorFlow and PyTorch for intelligent solutions, with experience in neural networks and deep learning applications.",
     },
     {
       icon: <MessageSquare className="size-10" aria-hidden />,
-      title: "Content Strategy",
-      description: "Developing compelling content that tells your story and connects with your target audience.",
+      title: "API Development & Integration",
+      description: "Building REST APIs and integrating third-party services like Spotify API, smart contracts, and CRM systems to create seamless user experiences.",
+    },
+    {
+      icon: <Palette className="size-10" aria-hidden />,
+      title: "Performance Optimization",
+      description: "Optimizing applications for maximum efficiency, including reducing game sizes by 73% and improving licensing processes to cut setup time by 50%.",
     },
   ],
 }) => {

@@ -97,31 +97,38 @@ export const ExperienceTimeline = ({
   subtitle = "A chronological journey through my professional career and education",
   experiences = [
     {
-      year: "2022 - Present",
-      title: "Senior Frontend Developer",
-      organization: "Tech Innovations Inc.",
-      description: "Leading the frontend development team in creating responsive, accessible web applications using React and Next.js. Implemented performance optimization strategies resulting in 40% faster load times.",
+      year: "Oct 2022 - Present",
+      title: "Web Developer",
+      organization: "SideFX Software Inc.",
+      description: "Developed an anti-piracy tool that effectively identified unauthorized use of company's software, Houdini, by both individual and corporate users, directly contributing to a 20% increase in protected intellectual property and enhanced protection. Streamlined Houdini's licensing process by automating installation and deactivation, cutting customer setup time by 50% and significantly improving user experience with more efficient license management. Engineered various internal tools and workflows for development, sales, and customer support teams, which streamlined processes, improved productivity and contributed to enhanced support efficiency. Maintained the company website and gauged user engagement in response to new features, guiding product development and improving customer retention.",
       type: "work"
     },
     {
-      year: "2020 - 2022",
-      title: "UI/UX Developer",
-      organization: "Digital Solutions Ltd.",
-      description: "Designed and developed user interfaces for enterprise applications. Collaborated with product managers and designers to implement responsive designs and interactive components.",
+      year: "Mar 2022 - Aug 2022",
+      title: "Software Engineer",
+      organization: "MetaVision Labs",
+      description: "Developed a 2D game in C# and Unity and helped design the vision and implementation of game features. Integrated Smart contracts into the game by developing a REST API that retrieves contract data and updates the game. Created documentation for the entire workflow of the game and the tests, as well as all the previous and potential errors. Developed company website in React and engineered SEO for the website in order to attract visitors. Performed product design role and helped in launching prototype 3 weeks earlier than planned.",
       type: "work"
     },
     {
-      year: "2018 - 2020",
-      title: "Junior Web Developer",
-      organization: "Creative Web Agency",
-      description: "Developed and maintained client websites using HTML, CSS, and JavaScript. Contributed to the creation of a component library that increased development efficiency by 25%.",
+      year: "May 2021 - Aug 2021",
+      title: "Full-Stack Web Developer",
+      organization: "CustomerBuds",
+      description: "Developed a full-stack website with a landing page and a backend for blog posts, using the Django framework. Conceptualized the design of the website and improved the user experience of the website.",
       type: "work"
     },
     {
-      year: "2014 - 2018",
-      title: "BSc Computer Science",
-      organization: "University of Technology",
-      description: "Graduated with honors, specializing in web technologies and software engineering. Led a team project that won the university's innovation award.",
+      year: "Sep 2020 - Dec 2020",
+      title: "Game Developer",
+      organization: "HiGarden – The Guardian App",
+      description: "Developed a planting simulator game in C# and Unity with a team of seven and worked in an Agile environment to expand and deploy the game. Advanced the game by adding several new levels and managed to significantly decrease the size of the game by 73% by using design techniques such as object pooling.",
+      type: "work"
+    },
+    {
+      year: "Sep 2018 - Jan 2022",
+      title: "Bachelor of Science, Specialist in Computer Science",
+      organization: "University of Toronto",
+      description: "Relevant Coursework: Data Structures & Algorithms, Software Design, Full-Stack Web Development, Database Design, Neural Networks & Deep Learning, Natural Language Processing, Operating Systems, Video Game Design. Graduated with strong foundation in computer science fundamentals and practical experience in modern development technologies.",
       type: "education"
     }
   ],
