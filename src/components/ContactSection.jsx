@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Linkedin, Github, ExternalLink, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, ExternalLink, Send, CheckCircle, AlertCircle } from "lucide-react";
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 import PropTypes from "prop-types";
@@ -9,12 +9,11 @@ export const ContactSection = ({
   title = "Get In Touch",
   subtitle = "Let's work together",
   email = "mohdhasan.mah@gmail.com",
-  phone = "+1 (647) 510-0863",
   location = "Toronto, ON",
   socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/mohammadhasan249",
+      url: "https://linkedin.com/in/mohdhasan249",
       icon: <Linkedin className="w-5 h-5" />,
     },
     {
@@ -125,21 +124,6 @@ export const ContactSection = ({
                       className="text-lg hover:text-[#52B2CF] transition-colors"
                     >
                       {email}
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#52B2CF]/10 flex items-center justify-center border border-[#52B2CF]/20">
-                    <Phone className="w-5 h-5 text-[#52B2CF]" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <a 
-                      href={`tel:${phone.replace(/\D/g, '')}`} 
-                      className="text-lg hover:text-[#52B2CF] transition-colors"
-                    >
-                      {phone}
                     </a>
                   </div>
                 </div>
@@ -327,7 +311,6 @@ ContactSection.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   email: PropTypes.string,
-  phone: PropTypes.string,
   location: PropTypes.string,
   socialLinks: PropTypes.arrayOf(
     PropTypes.shape({
