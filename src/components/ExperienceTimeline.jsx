@@ -104,7 +104,14 @@ export const ExperienceTimeline = ({
       type: "work"
     },
     {
-      year: "Jun 2021 - Oct 2022",
+      year: "Sep 2022 - Feb 2023",
+      title: "Frontend Developer",
+      organization: "Gifted",
+      description: "Developed a Shopify app as a frontend developer to revolutionize the gifting experience for e-commerce stores. Built and integrated a dynamic gifting button that seamlessly injects into store interfaces, opening an intuitive menu for customers to select gifting recipients. Implemented advanced scheduling functionality to automate gift delivery on specified dates, enhancing user experience and increasing customer satisfaction for online retailers.",
+      type: "work"
+    },
+    {
+      year: "Jun 2021 - Aug 2022",
       title: "Software Engineer",
       organization: "MetaVision Labs",
       description: "Developed a 2D game in C# and Unity and helped design the vision and implementation of game features. Integrated Smart contracts into the game by developing a REST API that retrieves contract data and updates the game. Created documentation for the entire workflow of the game and the tests, as well as all the previous and potential errors. Developed company website in React and engineered SEO for the website in order to attract visitors. Performed product design role and helped in launching prototype 3 weeks earlier than planned.",
