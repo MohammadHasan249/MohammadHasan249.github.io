@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { User, Mail, MapPin, Download, ArrowRight } from "lucide-react";
+import { User, Download, ArrowRight } from "lucide-react";
 import PropTypes from "prop-types";
 
 export const AboutSection = ({
@@ -13,10 +13,6 @@ export const AboutSection = ({
     "I'm big on modern technologies — Next.js, AWS, that whole stack — and I’ve worked across a bunch of different areas: from building web apps and business tools to game development and everything in between. I like fast feedback loops, shipping things that matter, and constantly learning along the way.",
     "Outside of work, I’m usually exploring new tech, building side projects, contributing to open-source, or chasing down ideas that could turn into something bigger. I'm always up for a challenge, especially when it blurs the line between creativity and code."
   ],
-  contactInfo = {
-    email: "mohdhasan.mah@gmail.com",
-    location: "Toronto, ON"
-  },
   skills = [
     "Python", "Java", "C#", "JavaScript", "HTML/CSS", "SQL", "Next.js",
     "React", "Node.js", "Django", "Flask", "Unity", "Angular", "Vue",
@@ -103,7 +99,7 @@ export const AboutSection = ({
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
                   viewport={{ once: true }}
-                  className="text-base leading-relaxed"
+                  className="text-base text-[17px] leading-relaxed"
                 >
                   {paragraph}
                 </motion.p>
@@ -120,7 +116,7 @@ export const AboutSection = ({
                     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
                   }
                 }}
-                className="inline-flex items-center gap-1.5 text-[#52B2CF] font-medium hover:underline cursor-pointer bg-transparent border-none"
+                className="inline-flex items-center gap-1.5 text-[#52B2CF] font-medium cursor-pointer bg-transparent border-none"
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
@@ -140,9 +136,5 @@ AboutSection.propTypes = {
   imageSrc: PropTypes.string,
   bio: PropTypes.string,
   longBio: PropTypes.arrayOf(PropTypes.string),
-  contactInfo: PropTypes.shape({
-    email: PropTypes.string,
-    location: PropTypes.string
-  }),
   skills: PropTypes.arrayOf(PropTypes.string)
 }; 
