@@ -91,6 +91,13 @@ export const ExperienceTimeline = ({
   subtitle = "A chronological journey through my professional career and education",
   experiences = [
     {
+      year: "2024 - Present",
+      title: "Founder & Lead Developer",
+      organization: "Genique",
+      description: "Founded and developed Genique, an AI-powered landing page generator that creates beautiful, high-converting pages in minutes. Built the entire platform from concept to launch, implementing advanced AI algorithms for automated design generation, conversion optimization, and user experience enhancement. Successfully serving entrepreneurs and agencies with rapid page creation capabilities.",
+      type: "work"
+    },
+    {
       year: "Oct 2022 - Present",
       title: "Web Developer",
       organization: "SideFX Software Inc.",

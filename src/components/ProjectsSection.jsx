@@ -104,6 +104,14 @@ export const ProjectsSection = ({
   subtitle = "A showcase of my recent work and personal projects",
   projects = [
     {
+      title: "AI Landing Page Generator",
+      description: "An AI-powered platform that generates beautiful, high-converting landing pages in minutes. Features automated design generation, conversion optimization, and instant deployment. Built for entrepreneurs and agencies to rapidly test ideas and launch faster.",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop&ixlib=rb-4.0.1&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      liveUrl: "https://www.genique.app/",
+      githubUrl: "https://github.com/MohammadHasan249/landing-page-generator",
+      categories: ["Websites", "Applications", "ML / AI"]
+    },
+    {
       title: "QuickForms",
       description: "A dynamic form-building web app utilizing Next.js and Prisma, offering customizable, embeddable forms. Seamlessly integrated form submissions with a variety of CRMs, through each of their individual APIs, optimizing data flow and user engagement.",
       image: "https://plus.unsplash.com/premium_photo-1681487870238-4a2dfddc6bcb?q=80&w=2680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
