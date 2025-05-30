@@ -21,7 +21,7 @@ export default function Hero() {
   return (
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-16 px-4 overflow-hidden">
       {/* Main Heading */}
-      <h1 className="z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-center text-white drop-shadow-xl">
+      <h1 className="z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-center drop-shadow-xl" style={{color: '#ffffff'}}>
         Mohammad Hasan
       </h1>
 
@@ -34,7 +34,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="text-[#52B2CF] font-semibold inline-block"
+            className="font-semibold inline-block"
+            style={{color: '#52B2CF'}}
         >
             {TITLES[index]}
         </motion.span>
@@ -42,7 +43,7 @@ export default function Hero() {
         </AnimatePresence>
       </div>
       {/* Description */}
-      <h3 className="z-10 text-xl md:text-2xl text-center max-w-2xl text-gray-300 font-normal">
+      <h3 className="z-10 text-xl md:text-2xl text-center max-w-2xl font-normal" style={{color: '#d1d5db'}}>
         I build software and businesses that solve real problems and make life better.
       </h3>
       {/* Call to Action */}
@@ -54,7 +55,13 @@ export default function Hero() {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }}
-            className="px-6 py-3 rounded-lg bg-[#5DE5DB] text-white font-semibold shadow-md hover:bg-[#46d2c9] transition-all duration-200 cursor-pointer"
+            className="px-6 py-3 rounded-lg font-semibold shadow-md transition-all duration-200 cursor-pointer"
+            style={{
+              backgroundColor: '#5DE5DB',
+              color: '#ffffff'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = '#46d2c9'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = '#5DE5DB'}
         >
             Get in Touch
         </button>
@@ -62,7 +69,20 @@ export default function Hero() {
             href="/portfolio/Mohammad_Hasan_Resume.pdf"
             target="_blank"
             rel="noopener"
-            className="px-6 py-3 rounded-lg font-semibold border border-[#7EC4CF] text-[#7EC4CF] hover:bg-[#7EC4CF] hover:text-white transition-all duration-200"
+            className="px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+            style={{
+              border: '1px solid #7EC4CF',
+              color: '#7EC4CF',
+              backgroundColor: 'transparent'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.backgroundColor = '#7EC4CF';
+              e.target.style.color = '#ffffff';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.backgroundColor = 'transparent';
+              e.target.style.color = '#7EC4CF';
+            }}
         >
             Download Resume
         </a>
@@ -70,4 +90,4 @@ export default function Hero() {
 
     </section>
   );
-} 
+}

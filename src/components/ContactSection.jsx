@@ -78,7 +78,7 @@ export const ContactSection = ({
   };
 
   return (
-    <section id="contact" className="pt-16 md:pt-24 bg-muted/20 dark:bg-black/20">
+    <section id="contact" className="pt-16 md:pt-24" style={{backgroundColor: 'rgba(51, 60, 70, 0.2)'}}>
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center mb-16">
           <motion.h2 
@@ -87,6 +87,7 @@ export const ContactSection = ({
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="text-balance text-4xl font-semibold lg:text-5xl"
+            style={{color: '#ffffff'}}
           >
             {title}
           </motion.h2>
@@ -95,7 +96,8 @@ export const ContactSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="mt-4 text-[#52B2CF] text-lg font-semibold max-w-2xl mx-auto"
+            className="mt-4 text-lg font-semibold max-w-2xl mx-auto"
+            style={{color: '#52B2CF'}}
           >
             {subtitle}
           </motion.p>
@@ -111,17 +113,20 @@ export const ContactSection = ({
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6" style={{color: '#ffffff'}}>Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-[#52B2CF]/10 flex items-center justify-center border border-[#52B2CF]/20">
                     <Mail className="w-5 h-5 text-[#52B2CF]" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="text-sm" style={{color: '#9ca3af'}}>Email</p>
                     <a 
                       href={`mailto:${email}`} 
-                      className="text-lg hover:text-[#52B2CF] transition-colors"
+                      className="text-lg transition-colors"
+                      style={{color: '#ffffff'}}
+                      onMouseEnter={(e) => e.target.style.color = '#52B2CF'}
+                      onMouseLeave={(e) => e.target.style.color = '#ffffff'}
                     >
                       {email}
                     </a>
@@ -133,15 +138,15 @@ export const ContactSection = ({
                     <MapPin className="w-5 h-5 text-[#52B2CF]" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-lg">{location}</p>
+                    <p className="text-sm" style={{color: '#9ca3af'}}>Location</p>
+                    <p className="text-lg" style={{color: '#ffffff'}}>{location}</p>
                   </div>
                 </div>
               </div>
             </div>
             
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Connect with me</h3>
+              <h3 className="text-2xl font-semibold mb-6" style={{color: '#ffffff'}}>Connect with me</h3>
               <div className="flex gap-4">
                 {socialLinks.map((link, index) => (
                   <motion.a
@@ -149,9 +154,20 @@ export const ContactSection = ({
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-white/5 border border-[#52B2CF]/20 flex items-center justify-center text-[#52B2CF] hover:bg-[#52B2CF] hover:text-white hover:border-transparent transition-all"
+                    className="w-12 h-12 rounded-full border border-[#52B2CF]/20 flex items-center justify-center text-[#52B2CF] transition-all"
+                    style={{backgroundColor: 'rgba(255, 255, 255, 0.05)'}}
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
+                    onMouseEnter={(e) => {
+                      e.target.style.backgroundColor = '#52B2CF';
+                      e.target.style.color = '#ffffff';
+                      e.target.style.borderColor = 'transparent';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                      e.target.style.color = '#52B2CF';
+                      e.target.style.borderColor = 'rgba(82, 178, 207, 0.2)';
+                    }}
                     title={link.name}
                   >
                     {link.icon}
@@ -167,9 +183,10 @@ export const ContactSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-white/5 border border-[#52B2CF]/20 rounded-lg p-8 shadow-lg"
+            className="border border-[#52B2CF]/20 rounded-lg p-8 shadow-lg"
+            style={{backgroundColor: 'rgba(255, 255, 255, 0.05)'}}
           >
-            <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
+            <h3 className="text-2xl font-semibold mb-6" style={{color: '#ffffff'}}>Send me a message</h3>
             
             {submitStatus && (
               <motion.div
@@ -198,7 +215,7 @@ export const ContactSection = ({
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1.5" style={{color: '#ffffff'}}>
                     Your Name *
                   </label>
                   <input
@@ -208,13 +225,14 @@ export const ContactSection = ({
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    className="w-full px-4 py-3 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', color: '#ffffff'}}
                     placeholder="John Doe"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1.5" style={{color: '#ffffff'}}>
                     Your Email *
                   </label>
                   <input
@@ -224,13 +242,14 @@ export const ContactSection = ({
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    className="w-full px-4 py-3 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', color: '#ffffff'}}
                     placeholder="john@example.com"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1.5" style={{color: '#ffffff'}}>
                     Subject *
                   </label>
                   <input
@@ -240,13 +259,14 @@ export const ContactSection = ({
                     value={formData.subject}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    className="w-full px-4 py-3 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors"
+                    style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', color: '#ffffff'}}
                     placeholder="Project Inquiry"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1.5" style={{color: '#ffffff'}}>
                     Message *
                   </label>
                   <textarea
@@ -256,7 +276,8 @@ export const ContactSection = ({
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/5 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors resize-none"
+                    className="w-full px-4 py-3 border border-[#52B2CF]/20 rounded-md focus:border-[#52B2CF] focus:outline-none focus:ring-1 focus:ring-[#52B2CF] transition-colors resize-none"
+                    style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', color: '#ffffff'}}
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
@@ -265,11 +286,18 @@ export const ContactSection = ({
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full flex items-center justify-center gap-2 py-3 px-6 rounded-md font-medium transition-colors ${
-                  isSubmitting 
-                    ? 'bg-[#52B2CF]/50 cursor-not-allowed' 
-                    : 'bg-[#52B2CF] hover:bg-[#3e9bb8]'
-                } text-white`}
+                className="w-full flex items-center justify-center gap-2 py-3 px-6 rounded-md font-medium transition-colors"
+                style={{
+                  backgroundColor: isSubmitting ? 'rgba(82, 178, 207, 0.5)' : '#52B2CF',
+                  color: '#ffffff',
+                  cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                }}
+                onMouseEnter={(e) => {
+                  if (!isSubmitting) e.target.style.backgroundColor = '#3e9bb8';
+                }}
+                onMouseLeave={(e) => {
+                  if (!isSubmitting) e.target.style.backgroundColor = '#52B2CF';
+                }}
                 whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                 whileTap={!isSubmitting ? { scale: 0.98 } : {}}
               >
@@ -297,7 +325,7 @@ export const ContactSection = ({
           className="mt-16 pt-8 pb-4 border-t border-[#52B2CF]/10"
         >
           <div className="text-center">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm" style={{color: '#9ca3af'}}>
               © {new Date().getFullYear()} Mohammad Hasan. All rights reserved.
             </p>
           </div>
