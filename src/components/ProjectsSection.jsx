@@ -12,7 +12,8 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl, categories
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.3 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      className="bg-white/5 border border-[#52B2CF]/20 rounded-lg overflow-hidden group shadow-lg hover:shadow-xl hover:shadow-[#52B2CF]/5 transition-all"
+      className="border border-[#52B2CF]/20 rounded-lg overflow-hidden group shadow-lg hover:shadow-xl hover:shadow-[#52B2CF]/5 transition-all"
+      style={{backgroundColor: 'rgba(255, 255, 255, 0.05)'}}
     >
       <div className="relative overflow-hidden aspect-video">
         <img 
@@ -27,7 +28,11 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl, categories
           {categories.map((category, i) => (
             <span 
               key={i} 
-              className="text-xs px-2 py-1 rounded-full bg-[#52B2CF]/20 text-[#52B2CF] backdrop-blur-sm border border-[#52B2CF]/10"
+              className="text-xs px-2 py-1 rounded-full backdrop-blur-sm border border-[#52B2CF]/20"
+              style={{
+                backgroundColor: 'rgba(82, 178, 207, 0.2)',
+                color: '#52B2CF'
+              }}
             >
               {category}
             </span>
@@ -36,8 +41,10 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl, categories
       </div>
       
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-[#52B2CF] transition-colors">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <h3 className="text-xl font-semibold mb-2 transition-colors" style={{color: '#ffffff'}}>
+          {title}
+        </h3>
+        <p className="mb-4" style={{color: '#9ca3af'}}>{description}</p>
         
         <div className="flex gap-3">
           {liveUrl && (
@@ -45,7 +52,13 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl, categories
               href={liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-[#52B2CF] font-medium bg-[#52B2CF]/10 px-3 py-1.5 rounded-full border border-[#52B2CF]/20 transition-all hover:bg-[#52B2CF]/20"
+              className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border border-[#52B2CF]/20 transition-all"
+              style={{
+                color: '#52B2CF',
+                backgroundColor: 'rgba(82, 178, 207, 0.1)'
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(82, 178, 207, 0.2)'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(82, 178, 207, 0.1)'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -58,7 +71,13 @@ const ProjectCard = ({ title, description, image, liveUrl, githubUrl, categories
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-sm text-[#52B2CF] font-medium bg-[#52B2CF]/10 px-3 py-1.5 rounded-full border border-[#52B2CF]/20 transition-all hover:bg-[#52B2CF]/20"
+              className="flex items-center gap-1.5 text-sm font-medium px-3 py-1.5 rounded-full border border-[#52B2CF]/20 transition-all"
+              style={{
+                color: '#52B2CF',
+                backgroundColor: 'rgba(82, 178, 207, 0.1)'
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(82, 178, 207, 0.2)'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'rgba(82, 178, 207, 0.1)'}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -203,7 +222,7 @@ export const ProjectsSection = ({
   }, [selectedCategory, projects]);
   
   return (
-    <section id="projects" className="py-16 md:py-24 bg-muted/30 dark:bg-transparent">
+    <section id="projects" className="py-16 md:py-24" style={{backgroundColor: 'rgba(51, 60, 70, 0.1)'}}>
       <div className="container mx-auto max-w-6xl px-6">
         <div className="text-center mb-12">
           <motion.h2 
@@ -211,6 +230,7 @@ export const ProjectsSection = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-balance text-4xl font-semibold lg:text-5xl"
+            style={{color: '#ffffff'}}
           >
             {title}
           </motion.h2>
@@ -218,20 +238,21 @@ export const ProjectsSection = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-[#52B2CF] text-lg font-semibold max-w-2xl mx-auto"
+            className="mt-4 text-lg font-semibold max-w-2xl mx-auto"
+            style={{color: '#52B2CF'}}
           >
             {subtitle}
           </motion.p>
         </div>
         
-        {/* Filter buttons */}
+        {/* Filter buttons - improved responsive layout */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-2 mb-12"
+          className="mb-12"
         >
-          <div className="inline-flex items-center gap-2 p-1.5 mb-2">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-3">
             {categories.map((category) => (
               <motion.button
                 key={category}
@@ -239,11 +260,14 @@ export const ProjectsSection = ({
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-all ${
+                className={`px-3 py-2 md:px-4 md:py-2 text-xs md:text-sm font-medium rounded-full transition-all border ${
                   selectedCategory === category
-                    ? "bg-[#52B2CF] text-white shadow-md shadow-[#52B2CF]/20"
-                    : "hover:bg-white hover:shadow-md hover:text-[#52B2CF]"
+                    ? "text-white shadow-md shadow-[#52B2CF]/20 border-[#52B2CF]"
+                    : "text-white border-white/20 hover:border-[#52B2CF] hover:text-[#52B2CF]"
                 }`}
+                style={{
+                  backgroundColor: selectedCategory === category ? '#52B2CF' : 'rgba(255, 255, 255, 0.05)'
+                }}
               >
                 {category}
               </motion.button>
@@ -287,10 +311,14 @@ export const ProjectsSection = ({
               animate={{ opacity: 1 }}
               className="col-span-full text-center py-12"
             >
-              <p className="text-xl text-muted-foreground">No projects found in this category.</p>
+              <p className="text-xl" style={{color: '#9ca3af'}}>No projects found in this category.</p>
               <button
                 onClick={() => setSelectedCategory("All")}
-                className="mt-4 inline-flex items-center gap-2 text-[#52B2CF] bg-[#52B2CF]/10 px-4 py-2 rounded-full font-medium"
+                className="mt-4 inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium"
+                style={{
+                  color: '#52B2CF',
+                  backgroundColor: 'rgba(82, 178, 207, 0.1)'
+                }}
               >
                 View all projects
               </button>

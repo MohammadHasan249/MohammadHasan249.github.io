@@ -13,7 +13,7 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
   };
   
   return (
-    <div className={`flex items-center mb-16 last:mb-0 relative ${isEven ? 'md:justify-start justify-start' : 'md:justify-end justify-start'}`}>
+    <div className={`flex items-start mb-16 last:mb-0 relative ${isEven ? 'md:justify-start justify-start' : 'md:justify-end justify-start'}`}>
       {/* Content box */}
       <motion.div 
         initial={{ opacity: 0, x: isEven ? -20 : 20 }}
@@ -23,12 +23,6 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
         className={`w-full md:w-[calc(50%-30px)] ml-0 md:ml-0 ${!isEven ? 'md:mr-0' : ''} bg-white/5 border border-[#52B2CF]/20 rounded-lg shadow-lg relative cursor-pointer group`}
         onClick={toggleExpand}
       >
-        {/* Arrow pointing to timeline - hidden on mobile */}
-        <div 
-          className={`absolute top-1/2 -mt-10 w-4 h-4 rotate-45 border-t border-r border-[#52B2CF]/20 bg-white/5 hidden md:block ${
-            isEven ? 'right-[-8px]' : 'left-[-8px] rotate-[225deg]'
-          }`}
-        ></div>
         
         <div className="p-4 md:p-6">
           <div className="flex items-center gap-3 mb-3">
@@ -69,13 +63,13 @@ const TimelineItem = ({ year, title, organization, description, type, index }) =
         </div>
       </motion.div>
       
-      {/* Center dot - adjusted for mobile */}
+      {/* Center dot - only visible on desktop */}
       <motion.div 
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.3, delay: 0.2 }}
         viewport={{ once: true }}
-        className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#52B2CF] z-10 flex items-center justify-center"
+        className="absolute left-4 md:left-1/2 transform -translate-x-1/2 top-6 w-4 h-4 md:w-6 md:h-6 rounded-full bg-[#52B2CF] z-10 hidden md:flex items-center justify-center"
       >
         <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white"></div>
       </motion.div>
@@ -149,6 +143,7 @@ export const ExperienceTimeline = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             className="text-balance text-3xl md:text-4xl lg:text-5xl font-semibold"
+            style={{color: '#ffffff'}}
           >
             {title}
           </motion.h2>
@@ -156,7 +151,8 @@ export const ExperienceTimeline = ({
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-4 text-[#52B2CF] text-base md:text-lg font-semibold max-w-2xl mx-auto"
+            className="mt-4 text-base md:text-lg font-semibold max-w-2xl mx-auto"
+            style={{color: '#52B2CF'}}
           >
             {subtitle}
           </motion.p>
@@ -164,7 +160,8 @@ export const ExperienceTimeline = ({
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-3 text-xs md:text-sm text-muted-foreground"
+            className="mt-3 text-xs md:text-sm"
+            style={{color: '#9ca3af'}}
           >
             <span className="inline-flex items-center gap-1">
               <ChevronDown className="w-3 h-3 md:w-4 md:h-4" /> Click on any entry to view details
@@ -173,10 +170,10 @@ export const ExperienceTimeline = ({
         </div>
         
         <div className="relative">
-          {/* Central vertical line - adjusted for mobile */}
-          <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#52B2CF] to-[#52B2CF]/20"></div>
+          {/* Central vertical line - fixed positioning for mobile */}
+          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#52B2CF] to-[#52B2CF]/20"></div>
           
-          <div className="relative z-10 pl-12 md:pl-0">
+          <div className="relative z-10 pl-10 md:pl-0">
             {experiences.map((exp, index) => (
               <TimelineItem
                 key={index}
@@ -198,11 +195,17 @@ export const ExperienceTimeline = ({
           >
             <a 
               href="/portfolio/Mohammad_Hasan_Resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#52B2CF] hover:underline font-medium bg-black/30 px-3 md:px-4 py-2 rounded-full text-sm md:text-base"
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
+              style={{
+                backgroundColor: '#52B2CF',
+                color: '#ffffff'
+              }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#3e9bb8'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = '#52B2CF'}
             >
-              View Full Resume <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
+              View Full Resume <ArrowRight className="w-4 h-4" />
             </a>
           </motion.div>
         </div>
