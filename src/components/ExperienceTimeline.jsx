@@ -91,8 +91,8 @@ export const ExperienceTimeline = ({
   subtitle = "A chronological journey through my professional career and education",
   experiences = [
     {
-      year: "2025 - Present",
-      title: "Founder & Lead Developer",
+      year: "May 2025 - Present",
+      title: "Founder",
       organization: "Genique",
       description: "Founded and developed Genique, an AI-powered landing page generator that creates beautiful, high-converting pages in minutes. Built the entire platform from concept to launch, implementing advanced AI algorithms for automated design generation, conversion optimization, and user experience enhancement. Successfully serving entrepreneurs and agencies with rapid page creation capabilities.",
       type: "work"
@@ -101,14 +101,14 @@ export const ExperienceTimeline = ({
       year: "Dec 2024 - Present",
       title: "Co-Founder & Lead Developer",
       organization: "PowerFlows",
-      description: "Co-founded PowerFlows, an AI automation agency specializing in workflow automation and business process optimization. Led the technical development using n8n automation platform to create sophisticated workflows for clients. Built custom automation solutions that streamline business operations, integrate multiple systems, and enhance productivity for various industries.",
+      description: "Co-founded PowerFlows, an AI automation agency specializing in workflow automation and business process optimization. Led the technical development using n8n to create sophisticated workflows for clients. Built custom automation solutions that streamline business operations, integrate multiple systems, and enhance productivity for various industries.",
       type: "work"
     },
     {
       year: "Jun 2023 - Jun 2024",
       title: "Co-Founder & Lead Developer",
       organization: "BrandSpace",
-      description: "Co-founded BrandSpace, a digital marketing agency focused on delivering comprehensive digital solutions for businesses. Led the technical development of client projects, including website development, digital marketing platforms, and custom software solutions. Collaborated with marketing teams to create data-driven strategies and implemented technical solutions that drive measurable results for clients.",
+      description: "Co-founded BrandSpace, a digital marketing agency focused on delivering comprehensive digital solutions for businesses. Led the technical development of client projects, including website development, digital marketing platforms, and custom software solutions.",
       type: "work"
     },
     {
@@ -141,7 +141,7 @@ export const ExperienceTimeline = ({
     },
     {
       year: "Sep 2020 - Dec 2020",
-      title: "Game Developer",
+      title: "Game Developer Intern",
       organization: "HiGarden – The Guardian App",
       description: "Developed a planting simulator game in C# and Unity with a team of seven and worked in an Agile environment to expand and deploy the game. Advanced the game by adding several new levels and managed to significantly decrease the size of the game by 73% by using design techniques such as object pooling.",
       type: "work"
