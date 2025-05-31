@@ -127,7 +127,7 @@ export const ProjectsSection = ({
     },
     {
       title: "Job Applications Tracker",
-      description: "A comprehensive full-stack web application built with the MERN stack (MongoDB, Express, React, Node.js) to help users efficiently track and manage their job applications throughout their career search process.",
+      description: "A comprehensive full-stack web application built with the MERN stack to help users efficiently track and manage their job applications throughout their career search process.",
       image: "/portfolio/images/jobstracker.jpg",
       githubUrl: "https://github.com/MohammadHasan249/JobsTrackerRepo",
       categories: ["Websites", "Applications"]
@@ -149,24 +149,30 @@ export const ProjectsSection = ({
     },
     {
       title: "E-Commerce App",
-      description: "An online shopping platform to purchase items online easily. Both a website and an Android app. Complete e-commerce solution with shopping cart, payment integration, and user management.",
+      description: "An online shopping platform to purchase items online easily. Complete e-commerce solution with shopping cart, payment integration, and user management.",
       image: "/portfolio/images/checkout.jpg",
       githubUrl: "https://github.com/MohammadHasan249/CheckoutCalculator---Web",
       categories: ["Websites", "Applications"]
-    },
-    {
-      title: "Math Speed Run",
-      description: "Test your Math skills and see how many you can get right within 60 seconds. A time-based arithmetic challenge game that tests mathematical abilities under pressure.",
-      image: "/portfolio/images/calculator.png",
-      githubUrl: "https://github.com/MohammadHasan249/ArithmeticGame",
-      liveUrl: "https://mohammadhasan249.github.io/projects/arithmeticrun/index.html",
-      categories: ["Websites", "Applications", "Game"]
     },
     {
       title: "Motion Detector",
       description: "A motion sensor which detects and tracks movement, and then outputs it onto a time-based graph. Advanced computer vision application for motion tracking and analysis.",
       image: "/portfolio/images/cctv.png",
       githubUrl: "https://github.com/MohammadHasan249/MotionDetector",
+      categories: ["ML / AI"]
+    },
+    {
+      title: "Sokoban Solver",
+      description: "An AI model that solves instances of the classic Sokoban puzzle game in under 5 seconds. Implements advanced algorithms for optimal puzzle solving.",
+      image: "https://images.unsplash.com/photo-1601063987324-7b482964872b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      githubUrl: "https://github.com/MohammadHasan249/SokobanSolver",
+      categories: ["ML / AI", "Applications"]
+    },
+    {
+      title: "Keratoconus Research",
+      description: "Medical ML research project focused on analyzing the Keratoconus eye condition data. Implements clustering algorithms and archetype analysis for pattern recognition in ophthalmological datasets, contributing to improved diagnosis and understanding treatment.",
+      image: "https://images.unsplash.com/photo-1576210117723-cd06449a467d?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      githubUrl: "https://github.com/MohammadHasan249/KerataconusResearch",
       categories: ["ML / AI"]
     },
     {
@@ -177,26 +183,11 @@ export const ProjectsSection = ({
       categories: ["Applications", "Game"]
     },
     {
-      title: "Ninja Turtles Race",
-      description: "Ever wondered who the fastest Ninja Turtle really is? Is it Leo? Raphael? Well, let's put it to the test. A fun racing game featuring the beloved Ninja Turtles characters.",
-      image: "/portfolio/images/ninjaturtles.png",
-      githubUrl: "https://github.com/MohammadHasan249/NinjaTurtlesRace",
-      categories: ["Game"]
-    },
-    {
       title: "JARVIS Virtual Assistant",
       description: "A JARVIS-like virtual assistant that listens to several commands, and acts on them. Voice-controlled AI assistant with natural language processing capabilities.",
       image: "/portfolio/images/jarvis.png",
       githubUrl: "https://github.com/MohammadHasan249/Jarvis-VirtualAssistant",
       categories: ["Applications", "ML / AI"]
-    },
-    {
-      title: "Fruit Ninja Clone",
-      description: "A remastered version of the classic mobile game Fruit Ninja, purely for the web. Engaging web-based game with smooth animations and responsive controls.",
-      image: "/portfolio/images/fruitninja.png",
-      githubUrl: "https://github.com/MohammadHasan249/FruitNinjaRemake",
-      liveUrl: "https://mohammadhasan249.github.io/projects/fruitninja/index.html",
-      categories: ["Websites", "Applications", "Game"]
     },
   ],
 }) => {

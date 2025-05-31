@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Calendar, Briefcase, GraduationCap, ArrowRight, ChevronDown } from "lucide-react";
+import { Calendar, Briefcase, GraduationCap, ArrowRight, ChevronDown, Rocket } from "lucide-react";
 import PropTypes from "prop-types";
 
 const TimelineItem = ({ year, title, organization, description, type, index }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const Icon = type === "education" ? GraduationCap : Briefcase;
+  
+  // Choose icon based on type
+  const getIcon = () => {
+    if (type === "education") return GraduationCap;
+    if (type === "venture") return Rocket;
+    return Briefcase; // default for work
+  };
+  
+  const Icon = getIcon();
   const isEven = index % 2 === 0;
   
   const toggleExpand = () => {
@@ -82,34 +90,34 @@ TimelineItem.propTypes = {
   title: PropTypes.string.isRequired,
   organization: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(["work", "education"]).isRequired,
+  type: PropTypes.oneOf(["work", "education", "venture"]).isRequired,
   index: PropTypes.number.isRequired
 };
 
 export const ExperienceTimeline = ({
   title = "My Experience",
-  subtitle = "A chronological journey through my professional career and education",
+  subtitle = "Professional work, entrepreneurial ventures, and education journey",
   experiences = [
     {
       year: "May 2025 - Present",
       title: "Founder",
       organization: "Genique",
       description: "Founded and developed Genique, an AI-powered landing page generator that creates beautiful, high-converting pages in minutes. Built the entire platform from concept to launch, implementing advanced AI algorithms for automated design generation, conversion optimization, and user experience enhancement. Successfully serving entrepreneurs and agencies with rapid page creation capabilities.",
-      type: "work"
+      type: "venture"
     },
     {
       year: "Dec 2024 - Present",
       title: "Co-Founder & Lead Developer",
       organization: "PowerFlows",
       description: "Co-founded PowerFlows, an AI automation agency specializing in workflow automation and business process optimization. Led the technical development using n8n to create sophisticated workflows for clients. Built custom automation solutions that streamline business operations, integrate multiple systems, and enhance productivity for various industries.",
-      type: "work"
+      type: "venture"
     },
     {
       year: "Jun 2023 - Jun 2024",
       title: "Co-Founder & Lead Developer",
       organization: "BrandSpace",
       description: "Co-founded BrandSpace, a digital marketing agency focused on delivering comprehensive digital solutions for businesses. Led the technical development of client projects, including website development, digital marketing platforms, and custom software solutions.",
-      type: "work"
+      type: "venture"
     },
     {
       year: "Oct 2022 - Present",
@@ -130,13 +138,6 @@ export const ExperienceTimeline = ({
       title: "Software Engineer",
       organization: "MetaVision Labs",
       description: "Developed a 2D game in C# and Unity and helped design the vision and implementation of game features. Integrated Smart contracts into the game by developing a REST API that retrieves contract data and updates the game. Created documentation for the entire workflow of the game and the tests, as well as all the previous and potential errors. Developed company website in React and engineered SEO for the website in order to attract visitors. Performed product design role and helped in launching prototype 3 weeks earlier than planned.",
-      type: "work"
-    },
-    {
-      year: "May 2021 - Aug 2021",
-      title: "Full-Stack Web Developer",
-      organization: "CustomerBuds",
-      description: "Developed a full-stack website with a landing page and a backend for blog posts, using the Django framework. Conceptualized the design of the website and improved the user experience of the website.",
       type: "work"
     },
     {
@@ -244,7 +245,7 @@ ExperienceTimeline.propTypes = {
       title: PropTypes.string.isRequired,
       organization: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      type: PropTypes.oneOf(["work", "education"]).isRequired,
+      type: PropTypes.oneOf(["work", "education", "venture"]).isRequired,
     })
   ),
 }; 
