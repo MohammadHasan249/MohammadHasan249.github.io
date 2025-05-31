@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { Code, Palette, Zap, Sparkles, LineChart, MessageSquare } from "lucide-react";
+import { Code, Gamepad2, Network, Brain, Zap, Settings } from "lucide-react";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
@@ -51,37 +51,37 @@ CardDecorator.propTypes = {
 
 export const WhatIDoSection = ({
   title = "What I Do",
-  subtitle = "Specialized in full-stack development, enterprise software solutions, and game development with a focus on creating efficient, scalable applications.",
+  subtitle = "Specialized in building scalable software solutions, intelligent applications, and interactive experiences that solve real-world problems.",
   skills = [
     {
       icon: <Code className="size-10" aria-hidden />,
       title: "Full-Stack Web Development",
-      description: "Building robust web applications using modern frameworks like React, Django, and Node.js. Experienced in creating everything from dynamic form builders to music collaboration platforms.",
+      description: "Create modern web applications using Next.js, Django, and many more. From dynamic form builders to AI-powered landing page generators, I build end-to-end solutions that are both user-friendly and technically robust.",
     },
     {
       icon: <Zap className="size-10" aria-hidden />,
       title: "Enterprise Software Solutions",
-      description: "Developing anti-piracy tools, licensing automation systems, and internal workflow tools that streamline business operations and increase productivity by 50%+.",
+      description: "Build internal tools and business automation systems that streamline operations. Developed anti-piracy tools, licensing systems, and workflow automation that increased team productivity by 50%+.",
     },
     {
-      icon: <Sparkles className="size-10" aria-hidden />,
+      icon: <Network className="size-10" aria-hidden />,
+      title: "System Design & Architecture",
+      description: "Plan and structure software systems for scalability and maintainability. Focus on clean architecture patterns, efficient data flow, and building applications that can grow with business needs.",
+    },
+    {
+      icon: <Brain className="size-10" aria-hidden />,
+      title: "AI/ML Engineering",
+      description: "Develop intelligent applications using machine learning and modern AI technologies. From medical research algorithms to AI-powered business tools, I turn complex data into actionable insights.",
+    },
+    {
+      icon: <Settings className="size-10" aria-hidden />,
+      title: "Automation & Workflow Engineering",
+      description: "Create intelligent automation systems that eliminate repetitive tasks and optimize business processes. Specializing in connecting different tools and services to create seamless workflows.",
+    },
+    {
+      icon: <Gamepad2 className="size-10" aria-hidden />,
       title: "Game Development",
-      description: "Creating engaging gaming experiences with Unity and C#, from 2D platformers to complex simulation games, with expertise in performance optimization and blockchain integration.",
-    },
-    {
-      icon: <LineChart className="size-10" aria-hidden />,
-      title: "Data Science & AI",
-      description: "Leveraging machine learning technologies including TensorFlow and PyTorch for intelligent solutions, with experience in neural networks and deep learning applications.",
-    },
-    {
-      icon: <MessageSquare className="size-10" aria-hidden />,
-      title: "API Development & Integration",
-      description: "Building REST APIs and integrating third-party services like Spotify API, smart contracts, and CRM systems to create seamless user experiences.",
-    },
-    {
-      icon: <Palette className="size-10" aria-hidden />,
-      title: "Performance Optimization",
-      description: "Optimizing applications for maximum efficiency, including reducing game sizes by 73% and improving licensing processes to cut setup time by 50%.",
+      description: "Design and develop engaging gaming experiences using Unity and C#. Specializing in multiplayer mechanics, performance optimization, and creating immersive gameplay that brings ideas to life.",
     },
   ],
 }) => {
