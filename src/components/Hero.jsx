@@ -66,7 +66,7 @@ export default function Hero() {
             Get in Touch
         </button>
         <a
-            href="/portfolio/Mohammad_Hasan_Resume.pdf"
+            href="/Mohammad_Hasan_Resume.pdf"
             target="_blank"
             rel="noopener"
             className="px-6 py-3 rounded-lg font-semibold transition-all duration-200"

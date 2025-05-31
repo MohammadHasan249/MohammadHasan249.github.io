@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 export const AboutSection = ({
   title = "About Me",
   subtitle = "Get to know me better",
-  imageSrc = "/portfolio/images/avatar.png",
   bio = "Hey, I'm a web developer and software engineer who loves building cool, useful stuff with code. I actually got into programming through Minecraft—modding servers and writing plugins was my gateway into the world of software. That curiosity never left, and it eventually grew into a full-blown career.",
   longBio = [
     "Right now, I work at SideFX Software, where I focus on creating internal tools, automating processes, and making systems that just work better for everyone. I enjoy solving real problems with clean, scalable solutions, and I’m always thinking about how to make things more efficient or user-friendly.",
@@ -70,7 +69,7 @@ export const AboutSection = ({
             </div>
             
             <motion.a
-              href="/portfolio/Mohammad_Hasan_Resume.pdf"
+              href="/Mohammad_Hasan_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 w-full bg-[#52B2CF] text-white py-3 rounded-lg font-medium hover:bg-[#3e9bb8] transition-colors"
@@ -133,7 +132,6 @@ export const AboutSection = ({
 AboutSection.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  imageSrc: PropTypes.string,
   bio: PropTypes.string,
   longBio: PropTypes.arrayOf(PropTypes.string),
   skills: PropTypes.arrayOf(PropTypes.string)

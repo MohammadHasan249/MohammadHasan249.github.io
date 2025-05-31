@@ -128,14 +128,14 @@ export const ProjectsSection = ({
     {
       title: "Job Applications Tracker",
       description: "A comprehensive full-stack web application built with the MERN stack to help users efficiently track and manage their job applications throughout their career search process.",
-      image: "/portfolio/images/jobstracker.jpg",
+      image: "/images/jobstracker.jpg",
       githubUrl: "https://github.com/MohammadHasan249/JobsTrackerRepo",
       categories: ["Websites", "Applications"]
     },
     {
       title: "Dodge Time",
       description: "Grab your friends and play a futuristic multiplayer dodgeball knockout game with clones. A fast-paced multiplayer game built with Unity featuring real-time multiplayer mechanics and engaging gameplay.",
-      image: "/portfolio/images/dodgetime.jpg",
+      image: "/images/dodgetime.jpg",
       githubUrl: "https://github.com/MohammadHasan249",
       liveUrl: "https://haotian-luo.itch.io/dodge-time",
       categories: ["Game"]
@@ -143,21 +143,21 @@ export const ProjectsSection = ({
     {
       title: "Gladiator's Dilemma",
       description: "You have one objective: Survive. Loyalties are tested in this intense multiplayer game. A moral dilemma-based survival game where players must make tough decisions to stay alive.",
-      image: "/portfolio/images/gdtitlepic.PNG",
+      image: "/images/gdtitlepic.PNG",
       githubUrl: "https://github.com/MohammadHasan249/GladiatorsDilemma",
       categories: ["Game"]
     },
     {
       title: "E-Commerce App",
       description: "An online shopping platform to purchase items online easily. Complete e-commerce solution with shopping cart, payment integration, and user management.",
-      image: "/portfolio/images/checkout.jpg",
+      image: "/images/checkout.jpg",
       githubUrl: "https://github.com/MohammadHasan249/CheckoutCalculator---Web",
       categories: ["Websites", "Applications"]
     },
     {
       title: "Motion Detector",
       description: "A motion sensor which detects and tracks movement, and then outputs it onto a time-based graph. Advanced computer vision application for motion tracking and analysis.",
-      image: "/portfolio/images/cctv.png",
+      image: "/images/cctv.png",
       githubUrl: "https://github.com/MohammadHasan249/MotionDetector",
       categories: ["ML / AI"]
     },
@@ -178,14 +178,14 @@ export const ProjectsSection = ({
     {
       title: "Android Game Bundle",
       description: "A bundle of three mini-games: whack-a-mole, a Math arithmetic game, and a card memory game. Comprehensive Android gaming package with multiple entertaining games.",
-      image: "/portfolio/images/cards.png",
+      image: "/images/cards.png",
       githubUrl: "https://github.com/MohammadHasan249/Game",
       categories: ["Applications", "Game"]
     },
     {
       title: "JARVIS Virtual Assistant",
       description: "A JARVIS-like virtual assistant that listens to several commands, and acts on them. Voice-controlled AI assistant with natural language processing capabilities.",
-      image: "/portfolio/images/jarvis.png",
+      image: "/images/jarvis.png",
       githubUrl: "https://github.com/MohammadHasan249/Jarvis-VirtualAssistant",
       categories: ["Applications", "ML / AI"]
     },

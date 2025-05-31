@@ -216,7 +216,7 @@ export const ExperienceTimeline = ({
             className="mt-8 md:mt-12 flex justify-center relative z-10"
           >
             <a 
-              href="/portfolio/Mohammad_Hasan_Resume.pdf" 
+              href="/Mohammad_Hasan_Resume.pdf" 
               target="_blank"
               rel="noopener"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200"
