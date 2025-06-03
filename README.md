@@ -26,8 +26,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: mohdhasan.mah@gmail.com
 - LinkedIn: [mohdhasan249](https://linkedin.com/in/mohdhasan249)
 - GitHub: [mohammadhasan249](https://github.com/mohammadhasan249)
-
-The portfolio is fully responsive and optimized for:
-- Desktop computers
-- Tablets
-- Mobile phones
