@@ -6,17 +6,6 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 
 [Visit Portfolio](https://mohammadhasan249.github.io/)
 
-## ✨ Features
-
-- **Modern Design**: Clean, professional layout with a consistent dark theme
-- **Responsive**: Fully responsive design that works on all devices
-- **Interactive Navigation**: Floating navigation with smooth scrolling and active section highlighting
-- **Animated Components**: Smooth animations and transitions using Framer Motion
-- **Contact Form**: Working contact form integrated with EmailJS
-- **Project Showcase**: Filterable project gallery with live demos and GitHub links
-- **Experience Timeline**: Interactive timeline showcasing work experience and ventures
-- **Skills Display**: Comprehensive overview of technical skills and expertise
-
 ## 🛠️ Technologies Used
 
 - **Frontend Framework**: React 18
@@ -26,20 +15,6 @@ A modern, responsive portfolio website showcasing my work as a Software Engineer
 - **Icons**: Lucide React
 - **Email Service**: EmailJS
 - **Deployment**: GitHub Pages *(or your preferred platform)*
-
-## 📱 Responsive Design
-
-The portfolio is fully responsive and optimized for:
-- Desktop computers
-- Tablets
-- Mobile phones
-
-## 🎯 Performance
-
-- Optimized images and assets
-- Lazy loading for better performance
-- Minimal bundle size with Vite
-- Fast loading times
 
 ## 📄 License
 
@@ -51,3 +26,8 @@ This project is open source and available under the [MIT License](LICENSE).
 - Email: mohdhasan.mah@gmail.com
 - LinkedIn: [mohdhasan249](https://linkedin.com/in/mohdhasan249)
 - GitHub: [mohammadhasan249](https://github.com/mohammadhasan249)
+
+The portfolio is fully responsive and optimized for:
+- Desktop computers
+- Tablets
+- Mobile phones
